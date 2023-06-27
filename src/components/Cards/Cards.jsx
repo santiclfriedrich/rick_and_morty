@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import Card from '../Card/Card.jsx';
+import style from './Cards.module.css'
 
 export default function Cards({characters}) {
-   return  <div>
+   return  <div className={style.divCards}>
       
       {
          characters.map(({ id, name, status, species, gender, origin, image }) => (
