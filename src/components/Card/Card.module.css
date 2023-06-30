@@ -6,7 +6,6 @@
 
 .cross{
     display: inline-block;
-    justify-content: flex-end;
     color: black;
     background-color: darkred;
     width: 25px;
