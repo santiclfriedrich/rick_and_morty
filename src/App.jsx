@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './App.css';
 import Cards from './components/Cards/Cards.jsx';
 import Nav from './components/Nav/Nav.jsx';
@@ -51,7 +52,7 @@ const onClose = (id) => {
       <div className='App'>
          {
             location.pathname !== '/' &&
-             <Nav onSearch={onSearch} />
+             <Nav onSearch={onSearch}  setAccess={setAccess} />
             
          }
          

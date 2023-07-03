@@ -1,11 +1,17 @@
 /* eslint-disable react/prop-types */
 import SearchBar from '../SearchBar/SearchBar.jsx';
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink} from 'react-router-dom'
 
-const Nav = ( {onSearch} ) => {
+const Nav = ( {onSearch, setAccess } ) => {
+
+
 
     const handleSearch = (id) => {
         onSearch(id);
+    }
+
+    const handleLogOut = () => {
+        setAccess(false);
     }
 
     return(
@@ -23,6 +29,9 @@ const Nav = ( {onSearch} ) => {
             <NavLink to='/about' > About </NavLink>
             </button>
        
+       <button onClick={handleLogOut} >
+             Log Out
+       </button>
 
     </div>
     );
