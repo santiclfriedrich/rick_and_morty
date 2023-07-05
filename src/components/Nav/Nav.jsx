@@ -28,6 +28,10 @@ const Nav = ( {onSearch, setAccess } ) => {
         <button>
             <NavLink to='/about' > About </NavLink>
             </button>
+
+        <button>
+            <Link to='/favorites'>Favorites</Link>
+        </button>
        
        <button onClick={handleLogOut} >
              Log Out

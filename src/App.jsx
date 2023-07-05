@@ -5,6 +5,7 @@ import Nav from './components/Nav/Nav.jsx';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form';
+import Favorites from './components/Favorites/Favorites';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
@@ -64,6 +65,7 @@ const onClose = (id) => {
             <Route path='/about' element={<About />} />
             <Route path='/detail/:id' element={<Detail />} />
             <Route path='*' element={<NotFoundPage />}/>
+            <Route path='/favorites' element={<Favorites />} />
          </Routes>
 
          
