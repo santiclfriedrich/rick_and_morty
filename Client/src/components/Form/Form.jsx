@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState } from "react"
 import validation from "../Validation/Validation"
+import style from './Form.module.css'
 
 const Form = ({ login }) => {
     const [errors, setErrors] = useState({})
@@ -27,7 +29,8 @@ const Form = ({ login }) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <div className="form-login" >
+        <form onSubmit={handleSubmit} >
 
             <label htmlFor="email">Email:</label>
             <input name="email" type="email" value={userData.email} onChange={handleChange} />
@@ -40,6 +43,7 @@ const Form = ({ login }) => {
             <button>Submit</button>
 
         </form>
+        </div>
     )
 }
 

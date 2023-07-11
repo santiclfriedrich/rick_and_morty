@@ -34,7 +34,7 @@ function App() {
    }, [access]);
 
    function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+      axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
             
@@ -51,13 +51,11 @@ const onClose = (id) => {
 
    return (
       <div className='App'>
+         
          {
             location.pathname !== '/' &&
              <Nav onSearch={onSearch}  setAccess={setAccess} />
-            
          }
-         
-         
 
          <Routes>
             <Route path='/' element={<Form login={login} />} />
@@ -67,8 +65,6 @@ const onClose = (id) => {
             <Route path='*' element={<NotFoundPage />}/>
             <Route path='/favorites' element={<Favorites />} />
          </Routes>
-
-         
 
       </div>
    );
