@@ -1,5 +1,7 @@
-const  server  = require('./app');
-const PORT = 3001;
+const express = require('express');
+const server = express();
+const router = require('./routes/index')
+const morgan = require('morgan');
 
 server.use(express.json());
 server.use(morgan('dev'))
@@ -20,6 +22,5 @@ server.use((req, res, next) => {
 
  server.use('/rickandmorty', router );
 
-server.listen(PORT, () => {
-    console.log(`Server raised in port: ${PORT}`);
-});
+ module.exports = server
+ 
